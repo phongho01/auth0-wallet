@@ -29,7 +29,7 @@ class UserController {
     const newUser = await userService.createOne({
       uid_auth0: user,
       address: wallet.address,
-      private_key: encryptData(wallet.privateKey),
+      private_key: wallet.privateKey,
       chain: 'eth',
     });
 

@@ -19,7 +19,6 @@ const generateKeyPair = () => {
   });
   fs.writeFileSync('private.pem', privateKey);
   fs.writeFileSync('public.pem', publicKey);
-  res.send();
 };
 
 const encryptData = (data) => {
