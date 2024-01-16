@@ -10,8 +10,6 @@ require('dotenv').config();
 
 const { AUTH0_WHITELIST_IP } = require('./constants');
 
-const port = 3001;
-
 const app = express();
 
 app.use(cors({ origin: '*' }));
