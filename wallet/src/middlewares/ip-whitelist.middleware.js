@@ -1,4 +1,5 @@
 const { AUTH0_WHITELIST_IP } = require('../constants');
+const requestIp = require('request-ip');
 
 const authenticateIpWhitelist = async (req, res, next) => {
   const ipInfo = requestIp.getClientIp(req);
