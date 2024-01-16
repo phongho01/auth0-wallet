@@ -1,5 +1,6 @@
 require('dotenv').config();
 const crypto = require('crypto');
+const fs = require('fs');
 
 const generateKeyPair = () => {
   const { publicKey, privateKey } = crypto.generateKeyPairSync('rsa', {
