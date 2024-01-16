@@ -8,6 +8,7 @@ class UserController {
   async create(req, res) {
     try {
       const { user, hash } = req.body;
+      console.log(req.body);
 
       const decrypted = decryptedData(hash);
 
