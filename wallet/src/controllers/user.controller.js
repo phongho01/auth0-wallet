@@ -52,7 +52,7 @@ class UserController {
         res.status(404).send('User not found');
         return;
       }
-      const { private_key, ...data } = user;
+      const { private_key, ...data } = JSON.parse(JSON.stringify(user));
       res.json(data);
     } catch (error) {
       res.status(500).json(error);
