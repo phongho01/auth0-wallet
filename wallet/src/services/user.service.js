@@ -2,7 +2,7 @@ const User = require('../models/User');
 
 class UserService {
   findOneByCondition(conditions = {}) {
-    return User.find(conditions);
+    return User.findOne(conditions);
   }
 
   createOne(data) {
