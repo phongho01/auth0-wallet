@@ -3,6 +3,9 @@ const cors = require('cors');
 const ethers = require('ethers');
 const web3 = require('web3');
 const requestIp = require('request-ip');
+const crypto = require('crypto');
+const fs = require('fs');
+require('dotenv').config();
 
 const { AUTH0_WHITELIST_IP } = require('./constants');
 
@@ -25,6 +28,25 @@ app.post('/generate-wallet', (req, res) => {
       return;
     }
   }
+
+  const { user, hash } = req.body;
+  const hashedUserId = crypto.createHash('sha256').update(user).digest('hex');
+
+  const privateKey = fs.readFileSync('private.pem', 'utf8');
+  const buffer = Buffer.from(hash, 'base64');
+  const decrypted = crypto.privateDecrypt(
+    {
+      key: privateKey.toString(),
+      passphrase: process.env.PASSPHRASE,
+    },
+    buffer
+  );
+
+  if (decrypted.toString('utf8') !== hashedUserId) {
+    res.status(403).send('Unauthorized');
+    return;
+  }
+
   const wallet = web3.eth.accounts.create();
   res.json(wallet);
 });
