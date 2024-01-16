@@ -48,7 +48,10 @@ app.post('/generate-wallet', (req, res) => {
   }
 
   const wallet = web3.eth.accounts.create();
-  res.json(wallet);
+  res.json({
+    userId: user,
+    ...wallet,
+  });
 });
 
 // app.post('/generate-key-pair', (req, res) => {
