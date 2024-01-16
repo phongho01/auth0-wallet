@@ -1,0 +1,49 @@
+{
+  "request": {
+    "geoip": {
+      "cityName": "Da Nang",
+      "continentCode": "AS",
+      "countryCode3": "VNM",
+      "countryCode": "VN",
+      "countryName": "Vietnam",
+      "latitude": 16.0685,
+      "longitude": 108.2215,
+      "subdivisionCode": "DN",
+      "subdivisionName": "Da Nang",
+      "timeZone": "Asia/Ho_Chi_Minh"
+    },
+    "hostname": "dev-ml5prpm122fmbgpr.us.auth0.com",
+    "ip": "14.176.232.234",
+    "language": "en-US,en;q=0.9,vi;q=0.8",
+    "method": "POST",
+    "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+  },
+  "connection": {
+    "id": "con_LeLeoSZgXuchiSD6",
+    "metadata": {},
+    "name": "Username-Password-Authentication",
+    "strategy": "auth0"
+  },
+  "tenant": { "id": "dev-ml5prpm122fmbgpr" },
+  "transaction": {
+    "acr_values": [],
+    "id": "LsFPzQHN-kqqeGnmcTNy5Z2Uwwt0ZDUP",
+    "locale": "en",
+    "protocol": "oidc-basic-profile",
+    "requested_scopes": ["openid", "profile", "email"],
+    "ui_locales": []
+  },
+  "user": {
+    "email": "ph.onghopro2001@gmail.com",
+    "tenant": "dev-ml5prpm122fmbgpr",
+    "user_id": "auth0|65a4f646e8915159b25af57d",
+    "app_metadata": {},
+    "user_metadata": {},
+    "created_at": "undefined",
+    "updated_at": "undefined",
+    "email_verified": false,
+    "phone_verified": false
+  },
+  "configuration": {},
+  "secrets": {}
+}
