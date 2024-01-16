@@ -39,6 +39,7 @@ class UserController {
 
       res.json(newUser);
     } catch (error) {
+      console.error('error', error);
       res.status(500).json(error);
     }
   }
@@ -55,6 +56,7 @@ class UserController {
       const { private_key, ...data } = JSON.parse(JSON.stringify(user));
       res.json(data);
     } catch (error) {
+      console.error('error', error);
       res.status(500).json(error);
     }
   }
