@@ -1,6 +1,11 @@
 const app = require('./server');
+const connectDB = require('./config/db');
 const port = 3001;
 
-app.listen(port, () => {
-  console.log('App is listening on port', port);
-});
+connectDB()
+  .then(() => {
+    app.listen(port, () => {
+      console.log('App is listening on port', port);
+    });
+  })
+  .catch(console.error);
