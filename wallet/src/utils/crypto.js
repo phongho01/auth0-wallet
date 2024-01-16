@@ -31,7 +31,7 @@ const encryptData = (data) => {
 
 const decryptedData = (data) => {
   const privateKey = fs.readFileSync('private.pem', 'utf8');
-  const buffer = Buffer.from(hash, 'base64');
+  const buffer = Buffer.from(data, 'base64');
   const decrypted = crypto.privateDecrypt(
     {
       key: privateKey.toString(),
