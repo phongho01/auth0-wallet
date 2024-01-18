@@ -8,7 +8,7 @@ const UserSchema = mongoose.Schema(
     chain: { type: String, default: 'eth' },
   },
   {
-    timestamp: true,
+    timestamps: true,
   }
 );
 
